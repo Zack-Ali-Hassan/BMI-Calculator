@@ -38,6 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          leading: Icon(Icons.menu),
           backgroundColor: kActiveButtonColor,
           title: Text(
             "Calculate Your Body Mass ".toUpperCase(),
@@ -299,7 +300,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                     () {
                                       if (age >= 4) {
                                         age--;
-                                        print("greeter then 10 years");
                                       } else {}
                                     },
                                   );
@@ -333,23 +333,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            RawMaterialButton(
-              child: Text(
-                "Calculate BMI",
-                style: TextStyle(
-                  fontSize: 24,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-              shape: RoundedRectangleBorder(),
-              fillColor: kActiveButtonColor,
-              constraints: BoxConstraints.tightFor(
-                width: double.infinity,
-                height: 45,
-              ),
-              onPressed: _goTOResultScreen,
-            )
+            CustomButton(onPressed: _goTOResultScreen),
           ],
         ));
   }

@@ -7,14 +7,14 @@ class ResultScreen extends StatelessWidget {
   final double result;
   ResultScreen({required this.result});
   String translateResult() {
-    if (result > 0 && result < 18) {
-      return "You are Underweight";
-    } else if (result > 19 && result < 25) {
-      return "You are in shape (Normal or Healthy Weight)";
-    } else if (result > 26 && result < 29) {
-      return "You are Overweight";
+    if (result > 0 && result < 18.5) {
+      return "You are Underweight 😊";
+    } else if (result > 18.5 && result < 24.9) {
+      return "You are in shape (Normal or Healthy Weight) 😊";
+    } else if (result > 24.9 && result < 29.9) {
+      return "You are Overweight 😊";
     } else {
-      return "your are Obese";
+      return "You are Obese 😊";
     }
   }
 
@@ -74,7 +74,7 @@ class ResultScreen extends StatelessWidget {
                       color: Colors.grey,
                     ),
                     textAlign: TextAlign.center,
-                  ),
+                  )
                 ],
               ),
             ),

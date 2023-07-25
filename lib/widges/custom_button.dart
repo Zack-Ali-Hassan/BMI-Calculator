@@ -17,11 +17,10 @@ class CustomButton extends StatelessWidget {
           fontWeight: FontWeight.w700,
         ),
       ),
-      shape: RoundedRectangleBorder(),
       fillColor: kActiveButtonColor,
       constraints: BoxConstraints.tightFor(
         width: double.infinity,
-        height: 45,
+        height: 50,
       ),
       onPressed: onPressed,
     );
